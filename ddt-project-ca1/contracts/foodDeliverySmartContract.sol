@@ -11,11 +11,16 @@ pragma solidity ^0.7.5;
     -Custumer ID = Used to verify with the riders ID.If ID mataches the rider true, if not false, order won't be delived.
 */
 contract FoodDelivery {
-    
     struct Order {
         address customer;
         string itemName; 
         uint customerId; 
         bool delivered;
     }
+
+   // Mapping to associate each order ID with its corresponding Order struct
+    mapping(uint => Order) public orders;
+    
+    uint public orderCount; // public variable that counts the number of orders placed by the customer and keep track of them
+
 }
