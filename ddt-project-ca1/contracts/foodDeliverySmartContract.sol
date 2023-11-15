@@ -14,9 +14,15 @@ contract FoodDeliveryContract { // smart contract name, works like a class same 
         // events that communicates when either the order is placed or received. 
         // I create just for completeness as in a real world Ethereum network we could see them.
         event FoodOrdered(uint orderId);
-        event FoodDelivered(uint orderId);
+        
+        // place order with Ether
+    function orderFood() external payable {
+    orderIdCounter++;  // ensure that the order has a unique address
+    uint orderId = orderIdCounter;
+    orders[orderId] = true;  // indicate that the order with the ID exists since the default boolean is false
+    emit FoodOrdered(orderId);
+}
 
-  
 }
 
 
