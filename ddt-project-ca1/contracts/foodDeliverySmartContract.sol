@@ -13,25 +13,26 @@ contract FoodDeliveryContract { // smart contract name, works like a class same 
         
         // events that communicates when either the order is placed or received. 
         // I create just for completeness as in a real world Ethereum network we could see them.
-        event FoodOrdered(uint orderId);
+        event foodOrderer(uint orderId);
+        event foodDelivered(uint orderId);
         
         // place order with Ether
     function orderFood() external payable {
-    orderIdCounter++;  // ensure that the order has a unique address
-    uint orderId = orderIdCounter;
-    orders[orderId] = true;  // indicate that the order with the ID exists since the default boolean is false
-    emit FoodOrdered(orderId);
+        orderIdCounter++;  // ensure that the order has a unique address
+        uint orderId = orderIdCounter;
+        orders[orderId] = true;  // indicate that the order with the ID exists since the default boolean is false
+        emit foodDelivered(orderId);
+}
+    /*  this functions checks if the orderID is true, but not yet delivered. Meaning, if order ID is false will stop and consume gas. 
+        IF order ID exists will proceed to not yet delived to be confirmed. 
+    */
+    function orderStatus(uint orderId) external  {
+        require(orders[orderId]);
+        require(!delivered[orderId]);
+        delivered[orderId] = true;  // indicate that the order with the ID exists since the default boolean is false
+        emit foodDelivered(orderId);
+    }
+
 }
 
-}
 
-
-/*
-    Code STRUCTURE to rememeber logic based on the smart contract proposal
-
-    Create an event as to when a new order is places
-    Another to show when order is delivered
-    Function to crate a new order
-    Function to mark order delivered
-    Function to verify whether or not order is delived using id etc.
-*/
