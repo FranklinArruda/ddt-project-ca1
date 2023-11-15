@@ -1,32 +1,27 @@
+
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.5;
+pragma solidity ^0.7.5; // version of the compiler
 
-/*
-    Constructor that defines the attributes for the smart contract
-    consisting in the following: 
+contract FoodDeliveryContract { // smart contract name, works like a class same as java
+    
+    uint public  orderIdCounter; // order ID counter to keep track of orders
+        
+        //  The mapping is essentially used here as a storage mechanism to keep track of the delivery status for each order.
+        // it is just storage to keep track of orders history and delivery history check
+        mapping(uint => bool) public orders;
+        mapping(uint => bool) public  delivered;
+        
+        // events that communicates when either the order is placed or received. 
+        // I create just for completeness as in a real world Ethereum network we could see them.
+        event FoodOrdered(uint orderId);
+        event FoodDelivered(uint orderId);
 
-    -Client Address
-    -Costumer Id= Tracks the order
-    -Boolean = Checks wether or not the order has been delivered successfully 
-    -Custumer ID = Used to verify with the riders ID.If ID mataches the rider true, if not false, order won't be delived.
-*/
-contract FoodDelivery {
-   
-    struct Order {
-        address customer;
-        string itemName; 
-        uint customerId; 
-        bool delivered;
-    }
-
-   // Mapping to associate each order ID with its corresponding Order struct
-    mapping(uint => Order) public orders;
-    uint public orderCount; // public variable that counts the number of orders placed by the customer and keep track of them
+  
 }
 
 
 /*
-     Code STRUCTURE to rememeber logic based on the smart contract proposal
+    Code STRUCTURE to rememeber logic based on the smart contract proposal
 
     Create an event as to when a new order is places
     Another to show when order is delivered
