@@ -3,7 +3,7 @@
 ## Food Delivery System walkthrough
 
 ### Overview
-The Food Delivery Smart Contract is a decentralized application (DApp) built on the Ethereum blockchain. It manages the ordering and delivery of food using Ethereum's smart contract functionality.
+The Food Delivery Smart Contract is a decentralized application built on the Ethereum blockchain. It manages the ordering and delivery of food using Ethereum's smart contract functionality.
 
 ### Contract Features
 
