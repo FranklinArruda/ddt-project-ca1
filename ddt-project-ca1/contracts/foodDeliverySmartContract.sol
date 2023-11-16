@@ -3,9 +3,8 @@
 pragma solidity ^0.7.5; // version of the compiler
 
 contract FoodDeliveryContract { // smart contract name, works like a class same as java
-    
-    uint public  orderIdCounter; // order ID counter to keep track of orders
-        
+        uint public  orderIdCounter; // order ID counter to keep track of orders
+
         //  The mapping is essentially used here as a storage mechanism to keep track of the delivery status for each order.
         // it is just storage to keep track of orders history and delivery history check
         mapping(uint => bool) public orders;
@@ -33,6 +32,10 @@ contract FoodDeliveryContract { // smart contract name, works like a class same 
         emit foodDelivered(orderId);
     }
 
+        // this method is just for querying and check whether the food is delivered or not with provided ID.
+    function isOrderDelivered(uint orderId) external view returns (bool) {
+        return delivered[orderId]; // It retrieves the boolean value associated with the provided orderId from the mapping.
+    }
 }
 
 
