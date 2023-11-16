@@ -28,7 +28,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "foodOrderer",
+				"name": "foodOrdered",
 				"type": "event"
 			},
 			{
@@ -150,11 +150,11 @@
 	},
 	"sources": {
 		"ddt-project-ca1/contracts/foodDeliverySmartContract.sol": {
-			"keccak256": "0xefc2b39b1c18b352be29ad9f79a34b1730f3ff4a094ec8d8b42123ac91752f6a",
+			"keccak256": "0xd2c734746f1a0347cae04c31b5518863f785a298852e42f3627c1345278dd2f7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://928182c90b9449f2b73ab1892cd913ee5f2739a1b37502a96713b4ba1ea96473",
-				"dweb:/ipfs/QmU2t5mTQNHP7zndnduwj2qYtq5KA4VV7SLJUMF64tjcKX"
+				"bzz-raw://00ef9dcf2bda7210715ccc596a0dfcb7db3ea78b4465b088872b5de16001cdd4",
+				"dweb:/ipfs/QmXMuQM367SmutpdrFrHcQfy1EfEFzbpFEMQ4uYKWLoPqq"
 			]
 		}
 	},
