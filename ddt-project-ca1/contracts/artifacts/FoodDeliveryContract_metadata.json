@@ -51,6 +51,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "isOrderDelivered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "orderFood",
 				"outputs": [],
@@ -131,11 +150,11 @@
 	},
 	"sources": {
 		"ddt-project-ca1/contracts/foodDeliverySmartContract.sol": {
-			"keccak256": "0x18f54aeb9bd7a8a7a08fc5a75810f0dbf24b685d1ba9f2b1312f83f045ec333b",
+			"keccak256": "0xefc2b39b1c18b352be29ad9f79a34b1730f3ff4a094ec8d8b42123ac91752f6a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://125df4c43c4e5d0763536e245f69b9e61fd7a60ba9e8a1ab763939b7ce45d33e",
-				"dweb:/ipfs/QmYhL6cZo5uVWwK8yeHjHxCxWj6WgYSDoZwK7FwmVyfbvE"
+				"bzz-raw://928182c90b9449f2b73ab1892cd913ee5f2739a1b37502a96713b4ba1ea96473",
+				"dweb:/ipfs/QmU2t5mTQNHP7zndnduwj2qYtq5KA4VV7SLJUMF64tjcKX"
 			]
 		}
 	},

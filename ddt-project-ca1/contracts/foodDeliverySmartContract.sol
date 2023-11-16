@@ -12,7 +12,7 @@ contract FoodDeliveryContract { // smart contract name, works like a class same 
         
         // events that communicates when either the order is placed or received. 
         // I create just for completeness as in a real world Ethereum network we could see them.
-        event foodOrderer(uint orderId);
+        event foodOrdered(uint orderId);
         event foodDelivered(uint orderId);
         
         // place order with Ether
